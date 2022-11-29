@@ -1,5 +1,6 @@
 const mongodb = require("mongodb");
-const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovieDeploye";
+// const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovieDeploye";
+const mongoURI = "mongodb+srv://bms:bms@bookMovieDeploye.1lhux3l.mongodb.net/?retryWrites=true&w=majority"
 let mongoose = require("mongoose");
 const app = require("../..");
 const { bookMovieSchema } = require("../models/bookMovie");
