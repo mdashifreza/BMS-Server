@@ -10,9 +10,12 @@ const TicketBooking = require("./routes/TicketBooking");
 const cors = require("cors");
 const userRouter = require("./routes/userRoutes");
 app.use(cors());
-
+//added code ashif
+app.get('/',(req,res)=>{
+  res.send("hey server is surring succesfully");
+})
+//
 app.use("/", TicketBooking);
-
 app.use("/users", userRouter);
 app.use(express.json());
 app.listen(port, () =>
