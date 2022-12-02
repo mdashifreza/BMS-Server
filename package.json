@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-        "node": "18.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node index.js",
@@ -25,6 +25,7 @@
     "express-validator": "^6.14.2",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.11.0",
-    "mongoose": "^6.7.2"
+    "mongoose": "^6.7.2",
+    "updated": "^2.0.3"
   }
 }

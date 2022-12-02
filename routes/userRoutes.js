@@ -1,5 +1,4 @@
 const express = require("express");
-// const { signup, signin } = require("../controllers/userController");
 const userRouter = express.Router();
 const { body } = require("express-validator");
 const userModel = require("../models/user");
@@ -8,6 +7,7 @@ const jwt = require("jsonwebtoken");
 const SECRET_KEY = "BMSPROJECT";
 const { validationResult } = require("express-validator");
 
+// ROUTE 1: Create a user using POST "/users/signup". No Login Required
 userRouter.post(
   "/signup",
   [
@@ -18,7 +18,9 @@ userRouter.post(
     }),
   ],
   async (req, res) => {
-    let success = false;
+    let success = false; // flag variable 
+
+    // If there are errors, return Bad requests and the errors
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
@@ -26,7 +28,7 @@ userRouter.post(
 
     const { username, email, password } = req.body;
     try {
-      //existing user check
+      //Check whether the user with this email already exists
       const existingUser = await userModel.findOne({ email: email });
       if (existingUser) {
         success = false;
@@ -39,7 +41,7 @@ userRouter.post(
       //Encrypt Password
       const hashedPassword = await bcrypt.hash(password, 10);
 
-      //New User Signup
+      //Create a new user
       const result = await userModel.create({
         email: email,
         password: hashedPassword,
@@ -69,6 +71,7 @@ userRouter.post(
   }
 );
 
+// ROUTE 2: Authenticate a user using POST "/users/signin". No Login Required
 userRouter.post(
   "/signin",
   [
@@ -76,7 +79,9 @@ userRouter.post(
     body("password", "Password cannot be blank").exists(),
   ],
   async (req, res) => {
-    let success = false;
+    let success = false; // flag variable
+
+    // If there are errors, return Bad requests and the errors
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       success = false;
@@ -84,7 +89,9 @@ userRouter.post(
     }
 
     const { email, password } = req.body;
+
     try {
+      //Check whether the user with this email already exists
       const existingUser = await userModel.findOne({
         email: email,
       });
@@ -101,6 +108,7 @@ userRouter.post(
         existingUser.password
       );
 
+      // Matching the password
       if (!matchPassword) {
         success = false;
         return res.status(400).json({

@@ -1,7 +1,6 @@
 const mongodb = require("mongodb");
-
-// const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie";
-
+//this is for local MongoDb const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie";
+//atlas MongoDb::: cloud Database
 const mongoURI ="mongodb+srv://bms:bms@bmsdeploye.1lhux3l.mongodb.net/?retryWrites=true&w=majority"
 
 let mongoose = require("mongoose");
