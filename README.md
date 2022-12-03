@@ -51,12 +51,11 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
   <a href="https://bookmyshow-project-backend.vercel.app"/>
   Live here
   </a>
-  
-  <br>
- 
-  <br>
- </br>
+<br></br>
+ <b>Check Database Data:</b> Open Your MongoDB Compass Software in your System.
 
+ <b>Paste and Save: </b>  `mongodb+srv://bms:bms123@bookmyshowDB.1bw2pfo.mongodb.net/bookMovie?retryWrites=true&w=majority`
+  <br></br>
 <b>Languages and Tools used: </b>
 
  <div>
