@@ -117,7 +117,7 @@ Used to provide token to newly registered users.
 {
     "success": true,
     "token": 
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2Mzg4ZTY3Y2Y3NmY4NDM1NDM5NzJkYzciLCJpYXQiOjE2NzAwNjk4Mjh9.TDvaQI96bIpj0fXZDAC9OGwRBHlLItlD3EWUp1l-1Wk"
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2MzhiNjAzY2U1MjZkZGVkYWNiOThkOTkiLCJpYXQiOjE2NzAwNzg3NjN9.DBmn9QYLJjWfUTsciU484lZYi1Nv_8PUvY7aBWFcD18"
 }
 
 ```
